@@ -6,8 +6,15 @@
 
 {% block content %}
 
+<style>
+.all{
+	margin-top:10rem;
+}
 
-<section class="section-intro padding-y-sm">
+
+</style>
+
+<section class="all section-intro padding-y-sm">
 	<div class="container-fluid mb-3">
 		
 	  <div class="row px-xl-5">
@@ -77,14 +84,46 @@
   </section>
   
 <!-- ========================= SECTION MAIN END// ========================= -->
+<style>
+	.brand{
+		background:black; 
+		color:white; 
+		border-radius: 20px; 
+		text-align:center; 
+		font-size:2rem;
+		opacity: 0.55;	
+	
+	}
+
+	.card{
+		box-shadow: 0px 0px 18px 0px #585656;
+		}	
+
+	.see{
+		text-decoration:none;
+		font-weight: bolder;
+
+		
+	}
+
+	.see:hover{
+		color:white;
+		font-weight: bolder;
+	
+	
+	
+	}
+	
+	</style>
 
 <!-- ========================= SECTION  ========================= -->
 <section class="section-name padding-y-sm">
 <div class="container">
 
 <header class="section-heading">
-	<a href="{% url 'store' %}" class="btn btn-outline-primary float-right">See all</a>
-	<h3 class="section-title">Popular products</h3>
+	<a href="{% url 'store' %}" class="see btn btn-outline-success float-right">See all</a><br>
+	<h2 class="brand section-title position-relative text-uppercase 
+	"  >Popular Products</h2>
 </header><!-- sect-heading -->
 
 <small>
@@ -124,9 +163,12 @@
 	</div> <!-- col.// -->
 	{% endfor %}
 
+
+
 	<div class="container-fluid pt-5">
-        <h2 class="section-title position-relative text-uppercase mx-xl-5
-            mb-4"><s>Brands</s></h2>
+        <h2 class="brand section-title position-relative text-uppercase mx-xl-5
+            mb-4"  >Brands</h2>
+			
         <div class="row px-xl-5 pb-3">
           {% for brand in all_brands %}
 
