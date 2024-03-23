@@ -35,10 +35,10 @@
     }
 
     .mene{
-      background: linear-gradient(0deg, #ff7300 0%, #ffffff 56%);
-            position: fixed;
+      background: #aa2855;
+      position: fixed;
       top: 0;
-      color: white;
+      color: rgb(229, 15, 15);
 
       width: 100%;
       z-index: 1000;
@@ -49,8 +49,8 @@
     }
 
     .navbar{
-      background:white;
-      color: white;
+      background:#aa2855;
+      color:#902147;
       position: fixed;
       top: 0;
       width: 100%;
@@ -124,10 +124,10 @@
                         </div>
                         {% else %}
                         <div class="widget-header">
-                          <small class="title text-muted">Welcome {{user.first_name}}!</small>
+                          <small class="title text-muted" style="text-decoration: none; color: rgb(228, 242, 255); font-weight: bold;">Welcome {{user.first_name}}!</small>
                           <div>
-                            <a href="{% url 'dashboard' %}">Dashboard</a> <span class="dark-transp"> | </span>
-                            <a href="{% url 'logout' %}"> Logout</a>
+                            <a href="{% url 'dashboard' %}" style="text-decoration: none; color: aliceblue; font-weight: bold;">Dashboard</a> <span class="dark-transp"> | </span>
+                            <a href="{% url 'logout' %}" style="text-decoration: none; color: aliceblue; font-weight: bold;" > Logout</a>
                           </div>
                         </div>
                         {% endif %}
